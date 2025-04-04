@@ -24,6 +24,11 @@ const Dashboard = () => {
         }
     };
 
+    //add a new page avalibity page and button to go there 
+    const handleAvailability = async () => {
+        navigate("/availability");
+    }
+
     if (!user) {
         return <p>Redirecting to login...</p>;
     }
@@ -32,6 +37,7 @@ const Dashboard = () => {
         <div>
             <h2>Welcome, {user.email}!</h2>
             <button onClick={handleLogout}>Logout</button>
+            <button onClick={handleAvailability}>Availability</button>
             <h3>Your Calendar</h3>
             <CalendarComponent /> {}
         </div>

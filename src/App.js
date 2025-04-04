@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Auth from "./auth/Auth";
 import Dashboard from "./auth/Dashboard";
 import CreateEvent from "./components/CreateEvent";
+import Availability from "./auth/Avalibility"; 
 import { auth } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
 
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/auth" element={<Auth onAuthSuccess={() => setUser(auth.currentUser)} />} />
                 <Route path="/dashboard" element={user ? <Dashboard /> : <Navigate to="/auth" />} />
                 <Route path="/create-event" element={user ? <CreateEvent /> : <Navigate to="/auth" />} />
+                <Route path="/availability" element={user ? <Availability /> : <Navigate to="/auth" />} /> 
                 <Route path="*" element={<Navigate to="/auth" />} />
             </Routes>
         </Router>
