@@ -1,31 +1,19 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import Auth from "./auth/Auth";
-import Dashboard from "./auth/Dashboard";
-import CreateEvent from "./components/CreateEvent";
-import Availability from "./auth/Avalibility"; 
-import { auth } from "./firebase";
-import { onAuthStateChanged } from "firebase/auth";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import EventPage from './EventPage';
+
+import './App.css';
 
 function App() {
-    const [user, setUser] = useState(null);
-
-    React.useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            setUser(currentUser);
-        });
-        return () => unsubscribe();
-    }, []);
-
     return (
         <Router>
-            <Routes>
-                <Route path="/auth" element={<Auth onAuthSuccess={() => setUser(auth.currentUser)} />} />
-                <Route path="/dashboard" element={user ? <Dashboard /> : <Navigate to="/auth" />} />
-                <Route path="/create-event" element={user ? <CreateEvent /> : <Navigate to="/auth" />} />
-                <Route path="/availability" element={user ? <Availability /> : <Navigate to="/auth" />} /> 
-                <Route path="*" element={<Navigate to="/auth" />} />
-            </Routes>
+            <div className="App">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/event/:eventId" element={<EventPage />} />
+                </Routes>
+            </div>
         </Router>
     );
 }
