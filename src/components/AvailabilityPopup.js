@@ -70,11 +70,14 @@ const AvailabilityPopup = ({ onClose, existingList }) => {
         return slots; 
     };
 
+    //this just checks that the user has correct tine constraints when tey try to submit
+
     const Submit = () => {
         const start = parseTime(startTime, startPeriod);
         const end = parseTime(endTime, endPeriod);
 
     
+        //check for valid time
         if (isNaN(start) || isNaN(end) || start >= end || start % 30 !== 0 || end % 30 !== 0) {
             alert('Time must needs to be in 30-minute increments.');
             return;

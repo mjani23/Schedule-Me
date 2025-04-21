@@ -3,6 +3,7 @@ import { useParams, useLocation } from 'react-router-dom';
 import { db } from './firebase';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import AvailabilityPopup from './components/AvailabilityPopup';
+import { useNavigate } from 'react-router-dom';
 
 const EventPage = () => {
     const { eventId } = useParams();
@@ -12,6 +13,7 @@ const EventPage = () => {
     const [availabilityList, setAvailabilityList] = useState([]);
     const [showPopup, setShowPopup] = useState(false);
 
+    const navigate = useNavigate();
     // Load the availability from Firestore
     const loadAvailability = useCallback(async () => {
         const eventRef = doc(db, 'events', eventId);
@@ -81,6 +83,8 @@ const EventPage = () => {
             <h2>Event: {eventId.replace(/-/g, ' ')}</h2>
             <p>Hi <strong>{userName}</strong>, add your availability below.</p>
             <button onClick={handleAddAvailability}>Add Availability</button>
+            <button onClick={() => navigate(`/event/${eventId}/top-times?user=${userName}`)}>View Top Meeting Times</button>
+
 
             {showPopup && (
                 <AvailabilityPopup
