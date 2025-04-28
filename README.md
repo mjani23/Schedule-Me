@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+**--Schedule Me--**  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Summary**    
+Schedule Me is a simple web app to help groups coordinate meeting times.  
+Users can create or join an event, enter their availability, and view the top times when most people are available  
 
-## Available Scripts
+This was built as part of an independent study with my mentor, Shane Donahue.  
+The goal was to learn new things, not focus on design. I mainly wanted to practice working with databases, React, and real-time updates in a real project.  
 
-In the project directory, you can run:
+**Features**  
+	•	Create a new event by entering an event name and your name  
+	•	Join an existing event with a provided sharable link  
+	•	Submit your available times  
+	•	View the most popular meeting times based on everyone’s availability  
+	•	Real time database updates using Firebase  
+	•	Sharable event links for easy group access  
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Home Page**  
+<img width="518" alt="Screenshot 2025-04-28 at 11 42 34 AM" src="https://github.com/user-attachments/assets/46a4269d-ead7-412c-a5ab-7b9dda58e504" />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Adding Avalibility**  
+<img width="1236" alt="Screenshot 2025-04-28 at 11 43 13 AM" src="https://github.com/user-attachments/assets/00f94d2b-ab2e-4672-b686-d51bef9913b7" />
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Best Times**  
+<img width="669" alt="Screenshot 2025-04-28 at 11 43 17 AM" src="https://github.com/user-attachments/assets/e0dcca9a-449c-4dbe-8da3-f6a46be9fd7a" />
